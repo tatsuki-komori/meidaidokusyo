@@ -120,6 +120,17 @@ h2 {
     margin-bottom: 60px;
 }
 
+#about {
+    position: relative;
+}
+
+#about img {
+    position:absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
 #about p {
     text-align: center;
     line-height: 48px;
@@ -128,7 +139,7 @@ h2 {
 }
 
 #activity {
-    height: 1300px;
+    height: 1500px;
     overflow: hidden;
 }
 
@@ -140,28 +151,48 @@ h2 {
 
 .activity-container {
     position: relative;
-    margin: 0 calc(50vw - 550px);
+    /* margin: 0 calc(50vw - 550px); */
 }
 
 .polygon1 {
     width: 560px;
     position: absolute;
-    top: 100px
+    top: 100px;
+    left: calc(50vw - 550px);
 }
 
 .polygon2 {
     width: 560px;
     position: absolute;
     top: 550px;
-    left: 650px;
+    left: calc(50vw - 550px + 650px);
 }
 
 .polygon3 {
     width: 400px;
     position: absolute;
     top: 950px;
-    left: 100px;
+    left: calc(50vw - 550px + 100px);
     
+}
+
+.polygon4 {
+    width: 800px;
+    position: absolute;
+    top: 280px;
+    left: calc(50vw - 550px + 120px);
+}
+
+.bar1 {
+    width: 100vw;
+    position: absolute;
+    top: 170px;
+}
+
+.bar2 {
+    width: 100vw;
+    position: absolute;
+    top: 700px;
 }
 
 .activity h3 {
@@ -172,9 +203,8 @@ h2 {
 
 .top-left {
     position: absolute;
-    top: 210px;
-    left: 80px;  
-
+    top: 210px; 
+    left: calc(50vw - 550px + 80px);
 }
 
 .top-left p {
@@ -186,7 +216,7 @@ h2 {
 .right {
     position: absolute;
     top: 580px;
-    left: 770px
+    left: calc(50vw - 550px + 770px);
 }
 
 .right h3 {
@@ -203,7 +233,7 @@ h2 {
 .bottom-left {
     position: absolute;
     top: 950px;
-    left: 180px;
+    left: calc(50vw - 550px + 180px);
 }
 
 .bottom-left h3 {
@@ -216,18 +246,86 @@ h2 {
     text-align: center;
 }
 
+#member {
+    position: relative;
+    padding: 50px 0;
+}
+
+.bg-polygon2 {
+    position: absolute;
+    width: 100vw;
+}
+
 .card {
     background-image: url(../images/memo.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 500px;
-    height: 500px;
-    box-shadow: 10px 10px #000
+    width: 520px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card .names {
+    display: block;
+    width: 230px;
+    height: 100px;
+    margin-top: 60px;
+}
+
+.names h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    
 }
 
 .card .icon {
     display: block;
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    margin-top: 40px;
+}
+
+.card .text {
+    width: 300px;
+    height: 130px;
+    margin: auto auto 70px 110px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .item {
+    margin: 20px auto 50px;
+}
+
+#contact .inner {
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+#contact .inner a {
+    margin: 0 30px;
+}
+
+#contact p {
+    font-size: 24px;
+}
+
+footer {
+    margin-top: 100px;
+    border-top: 1px solid #000;
+}
+
+footer p {
+    text-align: center;
+    margin: 12px 0;
 }
